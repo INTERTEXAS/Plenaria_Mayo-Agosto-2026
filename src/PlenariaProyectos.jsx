@@ -139,13 +139,13 @@ export default function PlenariaProyectos() {
                 >
                   {/* Barra de acento superior de la tarjeta */}
                   <div 
-                    className="absolute top-0 left-0 w-full h-[3px] transition-all duration-700 group-hover:h-[6px]"
+                    className="absolute top-0 left-0 w-full h-[3px]"
                     style={{ backgroundColor: category.color }}
                   ></div>
 
-                  {/* Contenedor del código QR - Fondo blanco puro y grande para lectura perfecta */}
-                  <div className="flex-1 min-h-0 w-full flex items-center justify-center py-1">
-                    <div className="w-[62%] aspect-square bg-white rounded-2xl p-2 flex items-center justify-center relative shadow-sm" style={{ boxShadow: 'inset 0 0 0 1px #E4E1D8' }}>
+                  {/* Contenedor del código QR - Ajustado exactamente a la referencia */}
+                  <div className="flex-1 min-h-0 w-full flex items-center justify-center mb-2 mt-1">
+                    <div className="w-[52%] aspect-square bg-white rounded-xl p-2 flex items-center justify-center relative shadow-sm" style={{ boxShadow: 'inset 0 0 0 1px #E4E1D8' }}>
                       <img 
                         src={card.qrUrl} 
                         alt={`QR de ${card.projectName}`}
@@ -156,14 +156,14 @@ export default function PlenariaProyectos() {
 
                   {/* Textos inferiores (Nombres e info) */}
                   <div className="flex-none text-center relative z-10 flex flex-col items-center justify-end">
-                    <h3 className="font-display font-bold text-xs xl:text-sm leading-tight truncate w-full px-1" style={{ color: '#1A1A1A' }}>
+                    <h3 className="font-display font-bold text-[10.5px] xl:text-xs leading-tight truncate w-full px-1" style={{ color: '#1A1A1A' }}>
                       {card.studentName}
                     </h3>
                     
                     {/* Badge del Proyecto */}
-                    <div className="mt-2 px-3 py-1 rounded-full border max-w-full" style={{ backgroundColor: '#F4F1E8', borderColor: '#E4E1D8' }}>
+                    <div className="mt-1.5 px-2.5 py-0.5 rounded-full border max-w-full" style={{ backgroundColor: '#F4F1E8', borderColor: '#E4E1D8' }}>
                       <p 
-                        className="font-body text-[8.5px] xl:text-[10px] font-bold tracking-widest uppercase truncate"
+                        className="font-body text-[8px] xl:text-[9.5px] font-bold tracking-widest uppercase truncate"
                         style={{ color: category.color }}
                       >
                         {card.projectName}
