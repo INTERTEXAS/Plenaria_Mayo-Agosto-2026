@@ -143,13 +143,13 @@ export default function PlenariaProyectos() {
                     style={{ backgroundColor: category.color }}
                   ></div>
 
-                  {/* Contenedor del código QR - Ajustado exactamente a la referencia */}
-                  <div className="flex-1 min-h-0 w-full flex items-center justify-center mb-2 mt-1">
-                    <div className="w-[52%] aspect-square bg-white rounded-xl p-2 flex items-center justify-center relative shadow-sm" style={{ boxShadow: 'inset 0 0 0 1px #E4E1D8' }}>
+                  {/* Contenedor del código QR - Tamaño perfecto idéntico a Foto 1 */}
+                  <div className="flex-1 min-h-0 w-full flex items-center justify-center my-1.5 overflow-hidden">
+                    <div className="h-full aspect-square bg-white rounded-xl p-2 flex items-center justify-center relative shadow-sm border border-[#E4E1D8]">
                       <img 
                         src={card.qrUrl} 
                         alt={`QR de ${card.projectName}`}
-                        className="h-full w-full object-contain" 
+                        className="max-h-full max-w-full object-contain" 
                       />
                     </div>
                   </div>
