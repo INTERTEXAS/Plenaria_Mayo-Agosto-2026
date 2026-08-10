@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="25" fill="#14161F"/>
+  <!-- Base of the P -->
+  <rect x="30" y="25" width="12" height="50" rx="6" fill="#F4F1E8"/>
+  <!-- Loop of the P -->
+  <path d="M 35 31 h 25 c 18 0, 18 26, 0 26 h -25" fill="none" stroke="#2F6B52" stroke-width="12" stroke-linecap="round"/>
+  <!-- Accent dots -->
+  <circle cx="68" cy="65" r="7" fill="#C68A2E"/>
+  <circle cx="46" cy="75" r="7" fill="#9B3226"/>
+</svg>
