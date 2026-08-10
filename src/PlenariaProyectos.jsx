@@ -130,7 +130,7 @@ export default function PlenariaProyectos() {
                 style={{ animationDelay: mounted ? `${idx * 0.05}s` : '0s' }}
               >
                 <div 
-                  className="floating-card h-full flex flex-col p-2 xl:p-2.5 rounded-2xl border relative overflow-hidden group shadow-lg"
+                  className="floating-card h-full flex flex-col p-1.5 xl:p-2 rounded-2xl border relative overflow-hidden group shadow-lg"
                   style={{ 
                     animationDelay: `${(idx % 5) * -1.2}s`,
                     backgroundColor: '#EDEAE0',
@@ -143,9 +143,9 @@ export default function PlenariaProyectos() {
                     style={{ backgroundColor: category.color }}
                   ></div>
 
-                  {/* Contenedor del código QR - Maximizado para lectura de cámara instantánea */}
-                  <div className="flex-1 min-h-0 w-full flex items-center justify-center my-1 overflow-hidden">
-                    <div className="h-full aspect-square bg-white rounded-xl p-1 flex items-center justify-center relative shadow-sm border border-[#E4E1D8]">
+                  {/* Contenedor del código QR - Optimizado para cámara (Quiet Zone + Máximo tamaño) */}
+                  <div className="flex-1 min-h-0 w-full flex items-center justify-center my-0.5 overflow-hidden">
+                    <div className="h-full aspect-square bg-white rounded-xl p-1.5 flex items-center justify-center relative shadow-sm border border-[#E4E1D8]">
                       <img 
                         src={card.qrUrl} 
                         alt={`QR de ${card.projectName}`}
@@ -155,16 +155,16 @@ export default function PlenariaProyectos() {
                     </div>
                   </div>
 
-                  {/* Textos inferiores (Nombres e info) */}
-                  <div className="flex-none text-center relative z-10 flex flex-col items-center justify-end pt-0.5">
-                    <h3 className="font-display font-bold text-[10px] xl:text-[11.5px] leading-tight truncate w-full px-1" style={{ color: '#1A1A1A' }}>
+                  {/* Textos inferiores (Nombres e info compacta) */}
+                  <div className="flex-none text-center relative z-10 flex flex-col items-center justify-end pb-0.5">
+                    <h3 className="font-display font-bold text-[9.5px] xl:text-[11px] leading-tight truncate w-full px-1" style={{ color: '#1A1A1A' }}>
                       {card.studentName}
                     </h3>
                     
                     {/* Badge del Proyecto */}
-                    <div className="mt-1 px-2 py-0.5 rounded-full border max-w-full" style={{ backgroundColor: '#F4F1E8', borderColor: '#E4E1D8' }}>
+                    <div className="mt-0.5 px-2 py-0.5 rounded-full border max-w-full" style={{ backgroundColor: '#F4F1E8', borderColor: '#E4E1D8' }}>
                       <p 
-                        className="font-body text-[8px] xl:text-[9px] font-bold tracking-widest uppercase truncate"
+                        className="font-body text-[7.5px] xl:text-[8.5px] font-bold tracking-widest uppercase truncate"
                         style={{ color: category.color }}
                       >
                         {card.projectName}
